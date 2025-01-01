@@ -1,24 +1,115 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe3f3, #d4e9ff);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #555;
+            text-align: center;
+            overflow: hidden;
+        }
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        h1 {
+            font-size: 6rem;
+            color: #ff6fa5;
+            text-shadow: 2px 2px 5px rgba(255, 111, 165, 0.5);
+            margin: 0 0 20px 0;
+            animation: blink 1s infinite alternate;
+        }
 
-<div class="container">
-  <h1>404</h1>
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+        img {
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #444;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6fa5;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(255, 111, 165, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff8dbb;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 111, 165, 0.5);
+        }
+
+        /* Đảm bảo tất cả nội dung căn giữa */
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <img id="anime-image" src="" alt="Random Anime" onclick="changeImage()" />
+        <p>「えへへ、お兄ちゃん～！探してるページがどこかに隠れちゃったみたいだよ～！」</p>
+        <a href="/" class="button">Về Trang Chủ Nè~</a>
+    </div>
+
+    <script>
+        // Fetch random anime image from nekos.best API
+        function fetchRandomImage() {
+            fetch('https://nekos.best/api/v2/neko')
+                .then(response => response.json())
+                .then(data => {
+                    const imageElement = document.getElementById('anime-image');
+                    imageElement.src = data.results[0].url;
+                })
+                .catch(error => console.error('Error fetching anime image:', error));
+        }
+
+        // Change image when clicked
+        function changeImage() {
+            fetchRandomImage();
+        }
+
+        // Load initial random image
+        fetchRandomImage();
+    </script>
+</body>
+</html>

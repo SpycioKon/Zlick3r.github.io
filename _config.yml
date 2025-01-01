@@ -1,10 +1,9 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
+title: Ent
+author: Spycio.Kon
+email: hackervnn40@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  「愛は決して消えることはなく、ただ思い出となって心の中で永遠に生き続ける。」
+  <br>CTF player for Zlick3r - former gray-hat hacker - junior pentester at RedSyn
 show_excerpts: false # set to true to show excerpts on the homepage
 
 paginate: 1
@@ -22,18 +21,16 @@ dash:
 
   # (optional) discqus comment configuration
   disqus:
-    shortname: bitbrain-github-io
-
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    - url: https://twitter.com/bitbrain_
+    - url: https://twitter.com/KonSpycio
       icon: twitter-square
       color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
+    - url: https://www.facebook.com/S1mpI3Love
+      icon: facebook-square
       color: red
-    - url: https://github.com/bitbrain
+    - url: https://github.com/SpycioKon
       icon: github-square
       color: purple
 
@@ -49,8 +46,8 @@ dash:
   # Replaces the default avatar provider (gravatar)
   #avatar_source: github
   #github_username: bitbrain
-  #avatar_source: local
-  #avatar_path: /assets/avatar.png
+  avatar_source: local
+  avatar_path: /assets/hehe.jpg
 
 # Build settings
 theme: jekyll-dash
