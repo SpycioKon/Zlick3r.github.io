@@ -4,6 +4,7 @@ email: hackervnn40@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   「愛は決して消えることはなく、ただ思い出となって心の中で永遠に生き続ける。」
   <br>CTF player for Zlick3r - former gray-hat hacker - junior pentester at RedSyn
+baseurl: "/blog"
 show_excerpts: false # set to true to show excerpts on the homepage
 
 paginate: 1
